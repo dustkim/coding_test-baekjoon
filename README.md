@@ -2,4 +2,4 @@
 
 Self-Training
 
-단계별로 풀어보기!
+solved.ac 단계별

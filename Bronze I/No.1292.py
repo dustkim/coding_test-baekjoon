@@ -1,8 +1,17 @@
 A, B = map(int, input().split())
 
 sum = 0
+count = 0
+number = 1
 
-for i in range(A, B+1, 1):
-    sum += i*i
+while True:
+    for i in range(number):
+        count += 1
+        if count >= A and count <= B:
+            sum += number
+    
+    if count >= B:
+        print(sum)
+        break
 
-print(sum)
+    number += 1

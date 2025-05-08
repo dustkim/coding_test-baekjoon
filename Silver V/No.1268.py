@@ -8,16 +8,19 @@ for i in range(N):
     List.append(input().split())
 
 for i in range(N-1):
-    for j in List[i]:
-        for k in range(i, N):
-            if j in List[k]:
+    for j in range(i+1, N):
+        for k in range(5):
+            if List[i][k] == List[j][k]:
                 dic[i+1] += 1
-                dic[k+1] += 1
+                dic[j+1] += 1
+                break
 
-max_value = max(dic.values())
+if dic:
+    max_value = max(dic.values())
 
-result = [i for i, v in dic.items() if v == max_value]
+    result = [i for i, v in dic.items() if v == max_value]
 
-result.sort(key=lambda x:x)
-
-print(result[0])
+    result.sort(key=lambda x:x)
+    print(result[0])
+else:
+    print('1')

@@ -10,8 +10,8 @@ if n not in S:
 
     if index == len(S)-1:
         row = S[index-1]
-        high = 1000
-        
+        high = 1001
+
         row_count = n-row
         high_count = high-n
 
